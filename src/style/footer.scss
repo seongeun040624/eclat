@@ -1,0 +1,118 @@
+@use './variables' as *;
+*{font-family: $font-Kr; letter-spacing:.5px;}
+.footer{
+    width:100%;
+    height:350px;
+    background: $sub1;
+    
+    display:flex;
+    flex-direction:column;
+    justify-content:space-between;
+    align-items: center;
+
+  .footer-inner{
+        color: $pb;
+        padding: 0 240px;
+        margin:auto;
+        width:100%;
+        display:flex;
+        justify-content:space-between;
+        .footer-left{
+
+            .logo a{
+                font-family: $font-En;
+                display: block;
+                color: $pb;
+                margin-bottom: 10px;
+                font-weight: 500;
+            }
+            p{
+                font-size:13px;
+                margin-bottom:6px;
+            }
+
+            .desc{
+                margin-top:12px;
+                width:420px;
+                line-height:1.6;
+                opacity:.8;
+                font-weight: 300;
+            }
+        }
+
+        .footer-right{
+            display:flex;
+            gap:120px;
+
+            h3{
+                font-size:15px;
+                margin-bottom:20px;
+                font-weight: 500;
+            }
+            ul{
+                list-style:none;
+                padding:0;
+            li{
+                font-size:13px;
+                margin-bottom:10px;
+                cursor:pointer;
+                color: $pb;
+
+                &:hover{
+                    opacity:.6;
+                }
+                a{color: $pb;}
+            }
+        }
+    }
+  }
+  .copyright{
+        width:100%;
+        height:50px;
+        display:flex;
+        align-items:center;
+        font-size:12px;
+        background:#1f1f1f;
+        color: $sub2;
+        .inner{
+            padding: 0 240px;
+            width:100%;
+        }
+    }
+
+  
+}
+
+.modal{
+  position:fixed;
+  top:0;
+  left:0;
+    
+  width:100%;
+  height:100%;
+
+  background:rgba(0,0,0,0.6);
+
+  display:flex;
+  justify-content:center;
+  align-items:center;
+
+  z-index:999;
+}
+
+.modal-box{
+    background:#fff;
+    padding:40px 60px;
+    border-radius:10px;
+    text-align:center;
+    color: $sub1;
+  p{
+    margin-bottom:20px;
+  }
+
+  button{
+    border:none;
+    padding:8px 18px;
+    cursor:pointer;
+  }
+}
