@@ -28,7 +28,8 @@ const Header = () => {
                 <div className="header-right">
                     <Link to="/wishlist"><MdOutlineStarOutline /></Link>
                     <Link to="/cart"><PiBag /></Link>
-                    <Link to="/login" className='login'>Login/Signup</Link>
+                    <Link path="/login" className='login'>Login</Link>
+                    <Link path="/signup" className='signup'>Signup</Link>
                 </div>
 
             </div>
