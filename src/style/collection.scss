@@ -1,0 +1,82 @@
+@use './variables' as *;
+*{font-family: $font-Kr; letter-spacing: .5px;}
+
+.collection{
+    width: 100%;
+    background: $main;
+    padding: 50px 240px;
+
+    .collection-title {
+        font-size: 24px;
+        font-weight: 500;
+        margin-bottom: 60px;
+        text-align: center;
+        color: $sub1;
+    }
+
+    .collection-list {
+        padding: 0 50px;
+        display: flex;
+        justify-content: center;
+        gap: 30px;
+        margin: 0 auto;
+
+        .collection-item {
+            //flex: 1;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+
+            .img-box {
+                width: 200px;
+                aspect-ratio: 3 / 4;
+                overflow: hidden;
+                margin-bottom: 15px;
+
+                img {
+                    width: 100%;
+                    height: 100%;
+                    //display: block;
+                    object-fit: cover;
+                    transition: transform 0.5s ease;
+                }
+
+                &:hover img {
+                    transform: scale(1.05); // 살짝 확대되는 효과
+                }
+            }
+
+            .item-name {
+                font-size: 18px;
+                font-weight: 500;
+                margin-bottom: 15px;
+                color: $sub1;
+            }
+
+            .watch-btn {
+                width: 100%;
+                padding: 10px 0;
+                background-color: $point; // 버튼 베이지 색상
+                color: $beige;
+                border: 1px solid $point;
+                cursor: pointer;
+                font-size: 14px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                transition: background-color 0.3s;
+
+                span {
+                    font-size: 18px;
+                }
+
+                &:hover {
+                    background-color: $beige;
+                    color: $point; // 호버 시 약간 어둡게
+                    font-weight: 500;
+                }
+            }
+        }
+    }
+}
