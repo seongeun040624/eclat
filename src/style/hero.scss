@@ -1,0 +1,24 @@
+@use './variables' as *;
+*{font-family: $font-Kr; letter-spacing: .5px;}
+
+.hero{
+    width: 100%;
+    height: 80vh;
+
+    .heroSwip{
+        width: 100%;
+        height: 100%;
+        img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+    .swiper-pagination-bullet-active{
+        background: $beige;
+    }
+    .swiper-button-prev, .swiper-button-next{
+        color: $beige;
+    }
+}
