@@ -9,9 +9,9 @@ import SignUpPage from './pages/SignUpPage';
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import Search from './components/Search'
-import Detail from './components/Detail'
+import Detail from './pages/Detail'
 
-import { perfumes } from './data/perfumeData'
+//import { perfumes } from './data/perfumeData'
 
 export const DataContext = createContext()
 

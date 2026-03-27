@@ -3,11 +3,11 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 
 import 'swiper/css';
 import 'swiper/css/pagination';
-import 'swiper/css/navigation';
+import 'swiper/css/effect-fade';
 
 import '../../style/hero.scss'
 
-import { Pagination, Navigation, Autoplay, EffectFade } from 'swiper/modules';
+import { Pagination, Autoplay, EffectFade } from 'swiper/modules';
 
 const Hero = () => {
     return (
@@ -15,7 +15,8 @@ const Hero = () => {
             <Swiper 
                 loop={true}
                 effect="fade"   // 핵심
-                fadeEffect={{ crossFade: true, speed:1000 }} // 부드럽게 겹치면서 전환
+                speed={1000}
+                fadeEffect={{ crossFade: true }} // 부드럽게 겹치면서 전환
                 autoplay={{
                 delay: 3000,
                 disableOnInteraction: false,
@@ -23,8 +24,7 @@ const Hero = () => {
                 pagination={{
                 clickable: true,
                 }}
-                navigation={true}
-                modules={[Autoplay, Pagination, Navigation, EffectFade]}
+                modules={[Autoplay, Pagination, EffectFade]}
                 className="heroSwip"
             >
                 <SwiperSlide><img src="/img/s1.jpg" alt="slideImg1" /></SwiperSlide>
